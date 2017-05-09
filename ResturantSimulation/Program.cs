@@ -35,9 +35,10 @@ namespace ResturantSimulation
             int billing_time;
             Random random = new Random();
             billing_time = random.Next(50,200);
-
+            int order_recivie_time = random.Next(50, 200); ;
+            int time_to_wait = (billing_time + order_recivie_time) * billing_queue.Count;
             //check if leave of stay:
-            if (new_customer.leave_queue < billing_time)
+            if (new_customer.leave_queue < time_to_wait)
             {
                 // customer enter the queue
                 billing_queue.Enqueue(new_customer);
@@ -86,10 +87,7 @@ namespace ResturantSimulation
 
 
             }
-            for (int i = 0; i < 10000 * duration; i++)
-            {
-
-            }
+          
         }
 
 
