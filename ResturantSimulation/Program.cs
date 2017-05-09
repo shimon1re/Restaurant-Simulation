@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ResturantSimulation
 {
     class Program
     {
-        struct customer
+        struct Customer
         {
             int customer_number;
             int value_of_order;
@@ -16,18 +17,20 @@ namespace ResturantSimulation
             int leave_queue;
         }
 
-        struct order
+        struct Order
         {
             int prepar_time;
             int customer_number;
         }
 
 
-        void customer_enter_to_resturant(customer new_customer)
+        void customer_enter_to_resturant(Customer new_customer)
         {
-            Queue <customer> enter_billing_queue= new Queue<customer>();
-            
+            Queue<Customer> enter_billing_queue = new Queue<Customer>();
+
         }
+
+        
 
         static void Main(string[] args)
         {
@@ -59,11 +62,17 @@ namespace ResturantSimulation
                 case 3:
                     Console.WriteLine("--------------Evening simulation---------------");
                     break;
-                
+
                 default:
 
                     break;
             }
+            for (int i = 0; i < 10000 * duration; i++)
+            {
+
+            }
         }
+
+
     }
 }
