@@ -31,7 +31,7 @@ namespace ResturantSimulation
 
         static void Main(string[] args)
         {
-            
+            int hello;
         }
     }
 }
