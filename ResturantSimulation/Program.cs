@@ -9,6 +9,7 @@ namespace ResturantSimulation
 {
     class Program
     {
+        Queue<Customer> enter_billing_queue = new Queue<Customer>();
         struct Customer
         {
             int customer_number;
@@ -26,7 +27,9 @@ namespace ResturantSimulation
 
         void customer_enter_to_resturant(Customer new_customer)
         {
-            Queue<Customer> enter_billing_queue = new Queue<Customer>();
+            //STEP 1:
+            //customer check if wait in the queue or leave it.
+
 
         }
 
@@ -34,6 +37,7 @@ namespace ResturantSimulation
 
         static void Main(string[] args)
         {
+           
             int choice = 0;
             int duration = 0;
             do
@@ -66,6 +70,8 @@ namespace ResturantSimulation
                 default:
 
                     break;
+
+
             }
             for (int i = 0; i < 10000 * duration; i++)
             {
