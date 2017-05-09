@@ -32,6 +32,7 @@ namespace ResturantSimulation
         static void Main(string[] args)
         {
             //gilad hello
+            //igor is very big gay
         }
     }
 }
