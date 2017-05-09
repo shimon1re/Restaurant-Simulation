@@ -9,14 +9,28 @@ namespace ResturantSimulation
 {
     class Program
     {
-        Queue<Customer> billing_queue = new Queue<Customer>();
-        struct Customer
+        public static int custNum = 0;
+        Random random = new Random();
+        static Queue<Customer> billing_queue = new Queue<Customer>();
+       public struct Customer
         {
            public int customer_number;
            public int value_of_order;
-           public DateTime time_of_enter;
+           public int time_of_enter;
            public int leave_queue;
+            // Ctor for customer
+           public Customer(int time_of_enter1)
+            {
+                Random random = new Random();
+                leave_queue = random.Next(900, 2400);
+                customer_number = ++custNum;
+                time_of_enter = time_of_enter1;
+                value_of_order = random.Next(200, 1000);
+                
+            }
         }
+        
+        
 
         struct Order
         {
@@ -33,9 +47,8 @@ namespace ResturantSimulation
 
             // culculate the billing time:
             int billing_time;
-            Random random = new Random();
             billing_time = random.Next(50,200);
-            int order_recivie_time = random.Next(50, 200); ;
+            int order_recivie_time = random.Next(50, 200) ;
             int time_to_wait = (billing_time + order_recivie_time) * billing_queue.Count;
             //check if leave of stay:
             if (new_customer.leave_queue < time_to_wait)
