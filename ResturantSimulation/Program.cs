@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ResturantSimulation
 {
     class Program
@@ -45,6 +46,8 @@ namespace ResturantSimulation
                 //leave
         }
 
+        
+
         static void Main(string[] args)
         {
            
@@ -76,13 +79,19 @@ namespace ResturantSimulation
                 case 3:
                     Console.WriteLine("--------------Evening simulation---------------");
                     break;
-                
+
                 default:
 
                     break;
 
 
             }
+            for (int i = 0; i < 10000 * duration; i++)
+            {
+
+            }
         }
+
+
     }
 }
