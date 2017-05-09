@@ -11,25 +11,38 @@ namespace ResturantSimulation
         Queue<Customer> enter_billing_queue = new Queue<Customer>();
         struct Customer
         {
-            int customer_number;
-            int value_of_order;
-            DateTime time_of_enter;
-            int leave_queue;
+           public int customer_number;
+           public int value_of_order;
+           public DateTime time_of_enter;
+           public int leave_queue;
         }
 
         struct Order
         {
-            int prepar_time;
-            int customer_number;
+           public int prepar_time;
+           public int customer_number;
         }
 
 
         void customer_enter_to_resturant(Customer new_customer)
         {
+            new_customer = new Customer();
             //STEP 1:
             //customer check if wait in the queue or leave it.
 
+            // culculate the billing time:
+            int billing_time;
+            Random random = new Random();
+            billing_time = random.Next(50,200);
 
+            //check if leave of stay:
+            if (new_customer.leave_queue<billing_time)
+            {
+                // enter to the queue
+            }
+
+            else
+                //leave
         }
 
         static void Main(string[] args)
