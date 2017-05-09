@@ -9,7 +9,7 @@ namespace ResturantSimulation
 {
     class Program
     {
-        Queue<Customer> enter_billing_queue = new Queue<Customer>();
+        Queue<Customer> billing_queue = new Queue<Customer>();
         struct Customer
         {
            public int customer_number;
@@ -39,12 +39,11 @@ namespace ResturantSimulation
             //check if leave of stay:
             if (new_customer.leave_queue < billing_time)
             {
-                // enter to the queue
+                // customer enter the queue
+                billing_queue.Enqueue(new_customer);
             }
 
-            else
-                //leave
-                Console.WriteLine("igor");
+            
         }
 
         
