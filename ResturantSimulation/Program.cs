@@ -33,6 +33,7 @@ namespace ResturantSimulation
         {
             //gilad hello
             //igor is very big gay
+            //igor is very big NAZI!!!
             //shalom
         }
     }
