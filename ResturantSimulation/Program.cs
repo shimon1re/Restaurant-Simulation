@@ -31,7 +31,7 @@ namespace ResturantSimulation
 
         static void Main(string[] args)
         {
-            
+            //shimon is very big gay
         }
     }
 }
