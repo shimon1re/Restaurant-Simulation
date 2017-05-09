@@ -37,13 +37,14 @@ namespace ResturantSimulation
             billing_time = random.Next(50,200);
 
             //check if leave of stay:
-            if (new_customer.leave_queue<billing_time)
+            if (new_customer.leave_queue < billing_time)
             {
                 // enter to the queue
             }
 
             else
                 //leave
+                Console.WriteLine("igor");
         }
 
         
